@@ -1,0 +1,76 @@
+/*
+.u_userInfo {
+  min-height: 500px;
+  text-align: center;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.upload_type {
+  min-width: 120 px;
+}
+
+.s_title {
+  padding-top:  10px
+}
+
+.s_info {
+  margin-top: 10px
+}
+
+.hobby_field {
+  padding-left: 5%;
+  padding-right: 5%
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+   //height: 75vh 
+}
+
+.button {
+  margin: 0 10vw
+}
+
+.images {
+  display: flex;
+  justify-content: center;
+}
+
+.delete {
+  float: center;
+  position: relative;
+  margin-bottom: 10px;
+  // top: 10px;
+  //left: 15px  
+}
+
+
+footer svg, .button svg, .delete svg {
+  transition: 0.3s;
+  transform: rotate(-0.2deg)
+}
+
+footer svg:hover, .button svg:hover, .delete svg:hover {
+  filter: drop-shadow(4px 4px 4px #999);
+  transform: rotate(-0.6deg);
+  cursor: pointer
+}
+
+input[type=file] { 
+  visibility: hidden;
+  position: absolute
+}
+
+img.preview {
+  margin-top: 25px;
+  max-height: 300px;
+  max-width: 420px;
+  padding: 10px;
+  border: 1px dashed #999;
+}
+*/
