@@ -335,5 +335,5 @@ class UploadForm extends Component {
 }
 
 export default GoogleApiWrapper({
-  apiKey: 'AIzaSyBQVfqqSFo-SzqrFH2dGubbDrPUkSxAbgs'
+  apiKey: ''
 })(UploadForm);
