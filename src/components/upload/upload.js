@@ -59,6 +59,8 @@ class UploadForm extends Component {
 
   handleChange = (event, value) => {
     this.setState({ value });
+    console.log(event);
+    console.log(value);
   };
 
   formChange(e) {
@@ -73,7 +75,7 @@ class UploadForm extends Component {
   photoChange = (e) => {
     this.setState({
       file: URL.createObjectURL(e.target.files[0]),
-      // image: e.target.files[0],
+      image: e.target.files[0],
 
       //after insert, would not show you the ability to post another picture
       previewState: false,
@@ -93,7 +95,7 @@ class UploadForm extends Component {
           return (
               <div>
                 <label htmlFor='single'>
-                    {/* <FontAwesomeIcon icon={faImage} color='#3B5998' size='7x' /> */}
+                    <FontAwesomeIcon icon={faImage} color='#3B5998' size='7x' />
                 </label>
                 <input type='file' id='single' onChange={this.photoChange}/>
               </div>
@@ -122,10 +124,15 @@ class UploadForm extends Component {
   /////google Map
   googleMapClick(t, map, coord) {
 
+    console.log(t);
+    console.log(map);
     console.log(coord);
     const { latLng } = coord;
     const lat = latLng.lat();
     const lng = latLng.lng();
+
+    console.log("latLng.lat(): " + latLng.lat());
+    console.log("latLng.lng(): " + latLng.lng());
 
     console.log(lat + '/' + lng)
 
@@ -145,6 +152,7 @@ class UploadForm extends Component {
   locationUpload () {
     if (this.state.locationName === '' || this.state.locationDescription === '') {
       this.setState({is_null: true});
+      console.log("locationUpload: " + this.state);
       return;
     }
 
@@ -186,18 +194,18 @@ class UploadForm extends Component {
 
     return (
       <div>
-          {/* <Tabs
+          <Tabs
             value={value}
             onChange={this.handleChange}
             variant="scrollable"
             scrollButtons="on"
             indicatorColor="primary"
             textColor="primary"
-            centered
+            // centered
           >
             <Tab label="Location" icon={<i className="material-icons">cloud_upload</i>} onClick={this.previewRemove} />
             <Tab label="Fish" icon={<i className="material-icons">cloud_upload</i>} onClick={this.previewRemove} />
-          </Tabs> */}
+          </Tabs>
         {value === 0 && (
           <div>
               <Grid container spacing={24}>
@@ -271,8 +279,8 @@ class UploadForm extends Component {
                       zoom={7}
                       style={{margin:2}}
                       initialCenter={{
-                        lat: 40.00,
-                        lng: -70.05
+                        lat: 41.00,
+                        lng: -74.05
                       }}
                       onClick = {this.googleMapClick}
                     >
@@ -335,5 +343,5 @@ class UploadForm extends Component {
 }
 
 export default GoogleApiWrapper({
-  apiKey: ''
+  apiKey: 'AIzaSyDNBKlIxl8ekBlC18mn6rDpoyJKW2IbkZw'
 })(UploadForm);
